@@ -1,13 +1,20 @@
 Beaujiful Soup
 ==============
 
-`Beautiful Soup` is a really nice Python library for extracting content from possibly-sloppy HTML, and I wanted some reasonably close Clojure equivalent.  Unfortunately, the standard classes don't work well malformed HTML;  as an example::
+`Beautiful Soup`_ is a really nice Python library for extracting
+content from possibly-sloppy HTML, and I wanted some reasonably close
+Clojure equivalent.  Unfortunately, the standard classes don't work
+well malformed HTML; as an example::
 
     => (require '(clojure [xml :as xml]))
     => (xml/parse "http://www.google.com")
     org.xml.sax.SAXParseException: The markup in the document preceding the root element must be well-formed. (NO_SOURCE_FILE:0)
 
-Fortunately, there is already a `TagSoup` library that can parse non-perfect HTML, and it is very `easy to integrate` TagSoup into xml/parse.  This module adds a few helper routines and brings the most-used calls into one amazingly bad namespace name.
+Fortunately, there is already a `TagSoup`_ library that can parse
+non-perfect HTML, and it is very `easy to integrate`_ TagSoup into
+xml/parse.  This module hardly does anything; it simply adds a few
+helper routines and brings the most-used calls into one amazingly bad
+namespace name.
 
 .. _Beautiful Soup: http://www.crummy.com/software/BeautifulSoup/
 .. _TagSoup: http://home.ccil.org/~cowan/XML/tagsoup/
